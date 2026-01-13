@@ -9,9 +9,7 @@ public class reverseOrderWords {
         String [] x=s.split(" ");
         for(int i=x.length-1;i>=0;i--)
         {
-            if(x[i].equals(""))
-                sb.append("");
-            else
+            if(!x[i].equals(""))
                 sb.append(x[i].trim()+" ");
         }
         System.out.println("The resultant string is: "+sb.toString().trim());
