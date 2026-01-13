@@ -20,15 +20,43 @@ class Solution
            return (char)(sum2-sum1);
      }
 }
+
+//this is another way i solved the problem
+class Test
+{
+    public char findTheDifference(String x, String y)
+    {
+                Map<Character,Integer> a=new HashMap<>();
+                Map<Character,Integer> b=new HashMap<>();
+                for(char ch:x.toCharArray())
+                {
+                    a.put(ch,a.getOrDefault(ch,0)+1);
+                }
+                for(char ch1:y.toCharArray())
+                {
+                    b.put(ch1,b.getOrDefault(ch1,0)+1);
+                }
+                for(int i=0;i<y.length();i++)
+                {
+                    if(a.get(y.charAt(i)) == null)
+                        return y.charAt(i);
+                    else if(b.get(y.charAt(i))>a.get(y.charAt(i)))
+                        return y.charAt(i);
+                }
+                return ' ';
+    }
+}
 public class findDifference {
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         Solution n=new Solution();
+        Test T=new Test();
         System.out.print("Enter the first string: ");
         String s=sc.nextLine();
         System.out.print("Enter the second string: ");
         String t=sc.nextLine();
         System.out.println("The difference between both the strings is: "+ n.findTheDifference(s,t));
+        System.out.println("The difference between both the strings using HashMaps: "+ T.findTheDifference(s,t));
         sc.close();
     }
 }
