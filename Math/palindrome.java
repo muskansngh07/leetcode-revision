@@ -1,3 +1,4 @@
+package Math;
 import java.util.*;
 class Solution{
     public boolean checkPalindrome(int a)

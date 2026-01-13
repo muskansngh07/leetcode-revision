@@ -1,3 +1,4 @@
+package bit_manipulation;
 import java.util.*;
 class Solution{
     public int numberBits(int n)
