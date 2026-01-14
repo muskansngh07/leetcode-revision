@@ -34,3 +34,4 @@ public class binarySearch {
     }
 }
 
+// Time Complexity: O(log n) where n is the number of elements in the array.
