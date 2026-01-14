@@ -1,3 +1,4 @@
+package Stack;
 //Leetcode 1544
 import java.util.*;
 public class makeStringGreat {

@@ -1,3 +1,4 @@
+package String;
 import java.util.*;
 class Solution{
     public boolean checkAnagram(String s, String t)
